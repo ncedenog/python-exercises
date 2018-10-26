@@ -6,9 +6,9 @@ Created on Fri Oct 26 14:36:13 2018
 @author: nataliecedeno
 """
 #%%
-def linear_search(lst,num):
+def linear_search(lst,number):
     for i in range(len(lst)):
-        if lst[i] == num:
+        if lst[i] == number:
             return i
     return None
 #%%
