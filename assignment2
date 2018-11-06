@@ -36,3 +36,32 @@ def bubble_for(lst):
                 lst[x] = lst[x + 1]
                 lst [x +1] = temp
 #%%
+def merge(a,b):
+    new_list = []
+    
+    while len(a) > 0 and len(b) > 0:
+        if a[0] < b[0]:
+            new_list.append(a[0])
+            a.pop(0)
+        else:
+            new_list.append(b[0])
+            b.pop(0)
+    
+    if len(a) == 0:
+        new_list += b
+    else:
+        new_list += a
+        
+    return new_list
+#%%
+def merge_sort(lst):
+    if len(lst) <= 1:
+        return lst
+    
+    middle = len(lst) // 2
+    
+    left = lst[:middle]
+    right = lst[middle:]
+    
+    return merge(merge_sort(left), merge_sort(right))
+#%%
