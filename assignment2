@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov  6 13:48:36 2018
+
+@author: nataliecedeno
+"""
+#%%
+input_lst = [2,3,4,5,12,45,1,23,7,9]
+
+def bubble(lst):
+    
+    y = 0
+    
+    while y < len(lst):
+        
+        x = 0
+        
+        while x < len(lst)-1:
+            if lst [x] > lst[x + 1]:
+                temp = lst[x]
+                lst[x] = lst[x + 1]
+                lst [x +1] = temp
+            
+            x += 1
+        
+        y+= 1
+#%%
+def bubble_for(lst):
+    
+   for y in range(len(lst) - 1):
+       
+       for x in range(len(lst) - y - 1):
+           if lst [x] > lst[x + 1]:
+                temp = lst[x]
+                lst[x] = lst[x + 1]
+                lst [x +1] = temp
+#%%
